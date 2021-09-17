@@ -3,9 +3,9 @@ package ru.job4j.inheritance;
 public class Surgeon extends Doctor {
     private String section;
 
-    public Surgeon(String surname, String education,
-                   String birthday, String spec, int seniority, String section, Diagnosis heal) {
-        super(surname, education, birthday, spec, seniority, heal);
+    public Surgeon(String name, String surname, String education,
+                   String birthday, String spec, int seniority, String section) {
+        super(name, surname, education, birthday, spec, seniority);
         this.section = section;
 
     }
@@ -22,7 +22,4 @@ public class Surgeon extends Doctor {
 
     }
 
-    public Diagnosis getHeal() {
-
-    }
 }
