@@ -35,11 +35,7 @@ public class Doctor extends Profession {
 
     }
 
-    public class Diagnosis {
+    public Diagnosis heal() {
 
-        public void heal() {
-            System.out.println("Лечить");
-        }
     }
-
 }
