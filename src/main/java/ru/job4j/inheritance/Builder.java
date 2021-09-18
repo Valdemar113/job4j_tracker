@@ -14,9 +14,10 @@ public class Builder extends Engineer {
     }
 
     public String getQuality() {
-
+        return getQuality();
     }
 
     public String getBirthday() {
+        return getBirthday();
     }
 }

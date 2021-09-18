@@ -7,7 +7,6 @@ public class Surgeon extends Doctor {
                    String birthday, String spec, int seniority, String section) {
         super(name, surname, education, birthday, spec, seniority);
         this.section = section;
-
     }
 
     public String getSection() {
@@ -15,11 +14,11 @@ public class Surgeon extends Doctor {
     }
 
     public String getSurname() {
-
+        return getSurname();
     }
 
     public String getSpec() {
-
+        return getSpec();
     }
 
 }

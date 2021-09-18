@@ -15,18 +15,18 @@ public class Engineer extends Profession {
     }
 
     public String getSurname() {
-
+        return getSurname();
     }
 
     public String getName() {
-
+        return getName();
     }
 
     public String getEducation() {
-
+        return getEducation();
     }
 
     public String getBirthday() {
-
+        return getBirthday();
     }
 }

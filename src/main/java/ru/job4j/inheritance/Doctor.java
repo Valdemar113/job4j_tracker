@@ -20,22 +20,22 @@ public class Doctor extends Profession {
     }
 
     public String getSurname() {
-
+        return getSurname();
     }
 
     public String getName() {
-
+        return getName();
     }
 
     public String getEducation() {
-
+        return getEducation();
     }
 
     public String getBirthday() {
-
+        return getBirthday();
     }
 
     public Diagnosis heal() {
-
+        return heal();
     }
 }

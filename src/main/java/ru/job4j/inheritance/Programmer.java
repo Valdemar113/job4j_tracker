@@ -14,10 +14,10 @@ public class Programmer extends Engineer {
     }
 
     public String getQuality() {
-
+        return getQuality();
     }
 
     public String getEducation() {
-
+        return getEducation();
     }
 }

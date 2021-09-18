@@ -14,10 +14,10 @@ public class Dentist extends Doctor {
     }
 
     public String getName() {
-
+        return getName();
     }
 
     public int getSeniority() {
-
+        return getSeniority();
     }
 }
