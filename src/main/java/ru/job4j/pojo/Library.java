@@ -11,20 +11,17 @@ public class Library {
         tale[1] = chipolino;
         tale[2] = buratino;
         tale[3] = maugli;
-        for (int index = 0; index < tale.length; index++) {
-            Book story = tale[index];
+        for (Book story : tale) {
             System.out.println(story.getName() + " : " + story.getCount());
         }
         tale[0] = maugli;
         tale[3] = kolobok;
-        for (int index = 0; index < tale.length; index++) {
-            Book story = tale[index];
+        for (Book story : tale) {
             System.out.println(story.getName() + " : " + story.getCount());
         }
         System.out.println("С именем Clean code");
-        for (int index = 0; index < tale.length; index++) {
-            Book story = tale[index];
-            if (story.getName().equals("Clean code")) {
+        for (Book story : tale) {
+            if ("Clean code".equals(story.getName())) {
                 System.out.println(story.getName() + " : " + story.getCount());
             }
         }
