@@ -3,9 +3,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Item {
-    private final LocalDateTime created = LocalDateTime.now();
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern(
             "dd-MMMM-EEEE-yyyy HH:mm:ss");
+    private final LocalDateTime created = LocalDateTime.now();
     private int id;
     private String name;
 
