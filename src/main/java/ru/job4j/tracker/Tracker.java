@@ -31,14 +31,11 @@ public class Tracker {
     public List<Item> findByName(String key) {
         List<Item> result = new ArrayList<>(items.size());
 
-        for (int index = 0; index < items.size(); index++) {
-            Item item = items.get(index);
+        for (Item item : items) {
             if (item.getName().equals(key)) {
                 result.add(item);
             }
-
         }
-        result = List.copyOf(result);
         return result;
     }
 
