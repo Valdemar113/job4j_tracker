@@ -19,12 +19,12 @@ public class OrderConvertTest {
     }
 
     @Test
-    public void whenOrder() {
+    public void whenDup() {
         List<Order> orders = new ArrayList<>();
         orders.add(new Order("3sfe", "Dress"));
         orders.add(new Order("3sfe", "Boxes"));
         HashMap<String, Order> map = OrderConvert.process(orders);
-        assertThat(map.get("3sfe"), is(new Order("3sfe", "Boxes")));
+        assertEquals(1, map.size());
     }
 
 }
