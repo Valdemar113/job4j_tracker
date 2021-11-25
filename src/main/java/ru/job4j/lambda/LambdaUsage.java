@@ -12,7 +12,7 @@ public class LambdaUsage {
         list.add("four");
         list.add("seven");
         Comparator<String> comparator = (left, right) -> {
-            System.out.println("Integer.compare - " + right.length() + " : " + left.length());
+            System.out.println("Integer.compare - " + left.length() + " : " + right.length());
             return Integer.compare(right.length(), left.length());
         };
         list.sort(comparator);
