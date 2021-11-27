@@ -28,8 +28,8 @@ public class DiapasonFuncTest {
     @Test
     public void whenExponentFunctionThenExponentResults() {
         DiapasonFunc function = new DiapasonFunc();
-        List<Double> result = function.diapason(5, 8, x -> Math.pow(x, x));
-        List<Double> expected = Arrays.asList(3125.0, 46656.0, 823543.0);
+        List<Double> result = function.diapason(5, 8, x -> Math.pow(5, x));
+        List<Double> expected = Arrays.asList(3125.0, 15625.0, 78125.0);
         assertThat(result, is(expected));
     }
 
