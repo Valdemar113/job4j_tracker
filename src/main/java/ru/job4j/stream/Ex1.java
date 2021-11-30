@@ -14,7 +14,7 @@ public class Ex1 {
         list.add(2);
 
         List<Integer> numbers = list.stream().filter(
-                l -> l >= 0).collect(Collectors.toList());
+                l -> l > 0).collect(Collectors.toList());
         numbers.forEach(System.out::println);
     }
 }
