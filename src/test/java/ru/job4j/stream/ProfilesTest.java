@@ -12,6 +12,7 @@ public class ProfilesTest {
     List<Profile> list = List.of(
             new Profile(new Address("Moscow", "Mira", 1, 33)),
             new Profile(new Address("Petersburg", "Svoboda", 13, 81)),
+            new Profile(new Address("Samara", "Nekrasova", 228, 322)),
             new Profile(new Address("Samara", "Nekrasova", 228, 322))
 
     );
