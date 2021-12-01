@@ -11,6 +11,10 @@ public class Student {
         this.surname = surname;
     }
 
+    public Student() {
+
+    }
+
     public int getScore() {
         return score;
     }
