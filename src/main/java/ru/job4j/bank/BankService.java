@@ -6,18 +6,20 @@ public class BankService {
     private final Map<User, List<Account>> users = new HashMap<>();
 
     public void addUser(User user) {
-        if (!users.containsKey(user)) {
+        users.putIfAbsent(user, new ArrayList<>());
+        /*if (!users.containsKey(user)) {
                 users.put(user, new ArrayList<>());
-            }
+            }*/
     }
 
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
-        List<Account> accList = users.get(user);
-        if (!accList.contains(account)) {
-            accList.add(account);
+        if (user != null) {
+            List<Account> accList = users.get(user);
+            if (!accList.contains(account)) {
+                accList.add(account);
+            }
         }
-
     }
 
     public User findByPassport(String passport) {
@@ -29,15 +31,28 @@ public class BankService {
         return null;
     }
 
-    public User findByRequisite(String passport, String requisite) {
+    public Account findByRequisite(String passport, String requisite) {
         User user1 = findByPassport(passport);
+        if (user1 != null) {
+            List<Account> list = users.get(user1);
+            for (Account i : list) {
+                if (i.getRequisite().equals(requisite)) {
+                    return i;
+                }
+            }
+        }
         return null;
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
-        boolean rsl = false;
-        return rsl;
+        Account srcAcc = findByRequisite(srcPassport, srcRequisite);
+        Account destAcc = findByRequisite(destPassport, destRequisite);
+        if (srcAcc != null && srcAcc.getBalance() >= amount) {
+            srcAcc.setBalance(srcAcc.getBalance() - amount);
+            destAcc.setBalance(destAcc.getBalance() + amount);
+            return true;
+        }
+        return false;
     }
-
 }
